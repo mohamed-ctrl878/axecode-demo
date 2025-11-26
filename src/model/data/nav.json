@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "path": null,
+        "linkName": "FV & MVP",
+        "children": [
+            {
+                "id": 1,
+                "path": "/FV",
+                "linkName": "FV"
+            },
+            {
+                "id": 2,
+                "path": "/MVP",
+                "linkName": "MVP"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "path": null,
+        "linkName": "features",
+        "children": [
+            {
+                "id": 1,
+                "path": null,
+                "linkName": "community",
+                "children": [
+                    {
+                        "id": 1,
+                        "path": "/chat",
+                        "linkName": "conversation"
+                    },
+                    {
+                        "id": 2,
+                        "path": "/blogs",
+                        "linkName": "blogs/feeds"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "path": null,
+                "linkName": "challenges",
+                "children": [
+                    {
+                        "id": 1,
+                        "path": "/software-league",
+                        "linkName": "software league"
+                    },
+                    {
+                        "id": 2,
+                        "path": "/code",
+                        "linkName": "code practices"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "linkName": "tech teach",
+                "path": null,
+                "children": [
+                    {
+                        "id": 1,
+                        "path": "/events",
+                        "linkName": "events"
+                    },
+                    {
+                        "id": 2,
+                        "path": "/learning",
+                        "linkName": "leatning"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "path": "/career",
+        "linkName": "career"
+    },
+    {
+        "id": 4,
+        "path": "/news",
+        "linkName": "News"
+    },
+    {
+        "id": 4,
+        "path": "/next-features",
+        "linkName": "next feature"
+    }
+]
