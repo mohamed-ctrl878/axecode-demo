@@ -8,7 +8,7 @@ import cartsData from "../../model/data/cartsData.json";
 const Home = () => {
   return (
     <main>
-      <HeroSection headcontent={homeData.headline}>
+      <HeroSection data={homeData}>
         <Donate></Donate>
       </HeroSection>
       <VidSection homeData={homeData}></VidSection>
