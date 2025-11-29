@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "path": "/polices",
+        "linkName": "polices"
+    },
+    {
+        "id": 2,
+        "path": "/donate",
+        "linkName": "donate"
+    },
+    {
+        "id": 3,
+        "path": "/support center",
+        "linkName": "support"
+    },
+    {
+        "id": 4,
+        "path": "/login",
+        "linkName": "login"
+    },
+    {
+        "id": 5,
+        "path": "/signin",
+        "linkName": "sign in"
+    }
+]

@@ -5,6 +5,7 @@ import Donate from "../components/Donate";
 import VidSection from "../components/VidSection";
 import GroupOfCarts from "../components/GroupOfCarts";
 import cartsData from "../../model/data/cartsData.json";
+import cartsData2 from "../../model/data/cartsData2.json";
 const Home = () => {
   return (
     <main>
@@ -16,6 +17,10 @@ const Home = () => {
         cartStyle={"card-horizontal"}
         cartsColor={""}
         cartsData={cartsData}
+      ></GroupOfCarts>
+      <GroupOfCarts
+        cartsData={cartsData2}
+        cartStyle={"carts-w-colors"}
       ></GroupOfCarts>
     </main>
   );

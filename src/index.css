@@ -99,8 +99,45 @@ p {
   font-weight: 300;
   color: #5c5b5b;
 }
+footer ,footer >div{
+  background-color: #293952;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+footer .logo{
+color: var(--white);
+flex: 0;
+span{
+
+  border-color: var(--white);
+}
+}
+footer ul {
+display: flex;
+gap: 20px;
+color: #aaa;
+flex-direction: column;
+
+}
+footer ul a{
+color:black;
+}
+footer ul a:hover{
+color:var(--white);
+text-decoration: underline;
+
+}
+footer ul .high-level-link{
+display: none;
+}
+footer ul  svg{
+display: none;
+}
 /* basics */
 .logo-header {
+  white-space: nowrap;
+  text-transform: uppercase;
   color: #141413;
   flex: 1;
   width: fit-content;
@@ -126,6 +163,9 @@ header {
   z-index: 999;
 }
 
+header nav  {
+transition: .4s;
+}
 header nav ul {
   display: flex;
   gap: 20px;
@@ -180,9 +220,14 @@ header nav ul > div > div {
     cursor: no-drop;
   }
 }
+header .toggle-btn {
+  display: none;
+  cursor: pointer;
+}
 
 /* w =988 h 742 */
 .explane-video {
+
   border-radius: 4px;
   width: 670px;
   height: 410px;
@@ -239,6 +284,24 @@ header nav ul > div > div {
     width: -webkit-fill-available;
   }
   width: fit-content;
+}
+.carts-w-colors{
+  margin-block: 16rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+  .cart{
+    max-width: 100%;
+    min-height: 250px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: rgba(250, 203, 85, 0.808);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 @media (min-width: 375px) {
@@ -312,5 +375,204 @@ header nav ul > div > div {
 
   .hero-section p {
     font-size: 0.95rem;
+  }
+}
+
+/* Responsive-only overrides (breakpoint-scoped) */
+@media (min-width: 1280px) {
+  .hero-section {
+    padding-top: calc(70px + 6rem);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-section {
+    padding-top: calc(70px + 4rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    gap: 20px;
+    padding-inline: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero spacing for tablets and phones */
+  .hero-section {
+    padding-top: 3rem;
+    padding-inline: 1rem;
+    align-items: center !important;
+  }
+
+  /* Header: make adaptive on small screens and allow nav wrapping */
+  header {
+    position: relative;
+    height: auto;
+    padding: 3px;
+  }
+  header nav ul {
+    position: fixed;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: start;
+    background: var(--white);
+    left: 0;
+    top: 9rem;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    gap: 7px;
+  }
+  .reg-log-btns.show-btn {
+    display: block;
+    text-align: end;
+  }
+  .reg-log-btns {
+    display: none;
+  }
+
+  header .show-mob ul{
+    height: 600px;
+    flex-wrap: nowrap;
+  }
+  header .hidden-mob ul{
+    padding: 0;
+    height: 0px !important;
+    overflow: hidden !important;
+  }
+  .reg-log-btns {
+    position: fixed;
+    top: 6rem;
+    width: 100%;
+    padding: 10px;
+    left: 0;
+    background: burlywood;
+    border-bottom: 1px solid black;
+  }
+  header .toggle-btn {
+    display: block;
+  }
+  header > div {
+    align-items: center !important;
+  }
+
+  header nav ul > div > span,
+  header nav ul > li a {
+    height: auto;
+    padding: 10px 0;
+  }
+  header nav ul .arrow-icon {
+    display: none;
+  }
+  header nav ul > div > span {
+    color: #aaa;
+  }
+  header nav ul a:hover,
+  header nav ul > div:hover {
+    text-decoration: none;
+  }
+  header nav ul > div:hover > div {
+    height: fit-content;
+    opacity: 1;
+  }
+  /* Container should wrap to avoid horizontal overflow */
+  .container {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-inline: 1rem;
+    align-items: flex-start;
+  }
+
+  /* Card stacking and reduced spacing on smaller screens */
+  .card-horizontal {
+    margin-top: 2rem;
+    padding-top: 1rem;
+  }
+  .card-horizontal .cart {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .card-horizontal .cart h3 {
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* Make dropdowns reflow with nav on mobile */
+  header nav ul > div > div {
+    position: static;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .explane-video {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  footer ,footer >div{
+    flex-wrap: wrap;
+    .logo{
+      flex: 1;
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  /* Tighten hero spacing for very small screens */
+  .hero-section {
+    padding-top: 2rem;
+    padding-inline: 0.8rem;
+  }
+
+  /* Video/image responsiveness: allow full-width and preserve aspect */
+  .explane-video {
+    max-width: 100%;
+    width: 100%;
+    height: auto !important;
+    display: block;
+    aspect-ratio: 16 / 9;
+  }
+
+  .container {
+    gap: 10px;
+    padding-inline: 0.6rem;
+  }
+
+  /* Allow reg/log buttons to wrap and reduce internal padding slightly */
+  .reg-log-btns {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .reg-log-btns button {
+    white-space: normal;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+
+  /* Reduce thumbnail control padding to avoid overlap on tiny screens */
+  .thumbnail .layout {
+    padding:22px;
+  }
+  @media (max-width: 360px) {
+    .thumbnail .layout {
+      padding: 17px;
+    }
+  }
+}
+
+/* Reinforce desktop-sized video behavior without changing visuals */
+@media (min-width: 768px) {
+  .explane-video {
+    width: 670px;
+    height: auto;
   }
 }
