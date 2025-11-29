@@ -68,7 +68,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 24rem;
+  padding-top: 30rem !important;
 
   gap: 1rem;
 }
@@ -155,7 +155,7 @@ display: none;
   }
 }
 header {
-  position: fixed;
+  position: fixed !important;
   height: 70px;
   width: 100%;
   background-color: var(--main-bg-color);
@@ -294,7 +294,7 @@ header .toggle-btn {
     min-height: 250px;
     padding: 20px;
     border-radius: 4px;
-    background-color: rgba(250, 203, 85, 0.808);
+    background-color:#e3dacc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -461,7 +461,7 @@ header .toggle-btn {
   header nav ul > div > span,
   header nav ul > li a {
     height: auto;
-    padding: 10px 0;
+    padding: 5px 0;
   }
   header nav ul .arrow-icon {
     display: none;
@@ -507,7 +507,7 @@ header .toggle-btn {
     width: 100%;
     height: auto;
     opacity: 1;
-    padding: 10px;
+    padding: 5px;
     box-shadow: none;
   }
 

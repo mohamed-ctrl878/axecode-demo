@@ -1,23 +1,26 @@
 [
     {
         "headline": "software league",
-        "paragraph": "sldfvfd vsdsldfvfdvsdsldfvfdvsdsldfvfd vsdsldfvfdvsd"
+        "paragraph": "It will be a software champions league where the competition is for the best software."
     },
     {
         "headline": "tech events",
-        "paragraph": "ldfkvsdmk"
+        "paragraph": "Strong presence at technical events, both in person and via live streaming."
     },
     {
         "headline": "community",
-        "paragraph": ";sldfvfdvsd"
+        "paragraph": "Find real developers near you in the region"
     },
     {
         "headline": "educational content",
-        "paragraph": "sldfvfdvsdsldfvfdv sdsldfvfdvsdsldfvf dvsdsldfvfdvsd"
+        "paragraph": "Learn to delve deeply into different technical stacks"
     },
-
     {
         "headline": "compititive programming",
-        "paragraph": "sldfvfdv sdsldfvfdvsdsldfvfdvsd sldfvfdvsd"
+        "paragraph": "As a programmer, you competed to enhance your logical thinking."
+    },
+    {
+        "headline": "Publish blogs",
+        "paragraph": "You can share your diary entries, memes, or anything else to get engagement."
     }
 ]
