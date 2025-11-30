@@ -304,6 +304,18 @@ header .toggle-btn {
   }
 }
 
+
+
+.feature{
+  min-height: 100vh;
+  justify-content: start;
+  align-items: flex-start;
+  padding-top: 9rem;
+
+  li{
+    list-style: inside !important;
+  }
+}
 @media (min-width: 375px) {
   .details-content {
     font-size: 15px;
