@@ -99,41 +99,68 @@ p {
   font-weight: 300;
   color: #5c5b5b;
 }
-footer ,footer >div{
+footer,
+footer > div {
   background-color: #293952;
   display: flex;
   justify-content: center;
   padding: 10px;
 }
-footer .logo{
-color: var(--white);
-flex: 0;
-span{
-
-  border-color: var(--white);
-}
+footer .logo {
+  color: var(--white);
+  flex: 0;
+  span {
+    border-color: var(--white);
+  }
 }
 footer ul {
-display: flex;
-gap: 20px;
-color: #aaa;
-flex-direction: column;
+  display: flex;
+  gap: 20px;
+  color: #aaa;
+  flex-direction: column;
+}
+footer ul a {
+  color: black;
+}
+footer ul a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+footer ul .high-level-link {
+  display: none;
+}
+footer ul svg {
+  display: none;
+}
 
+.ul-feature {
+  margin-left: 5rem;
+  list-style: unset;
+  line-height: 2;
 }
-footer ul a{
-color:black;
+.ul-feature ul {
+  margin-left: 2rem;
+  list-style: unset;
+  line-height: 1.5;
 }
-footer ul a:hover{
-color:var(--white);
-text-decoration: underline;
+.content-page {
+  padding-top: 9rem;
+  padding-bottom: 3rem;
+  h1 {
+    padding-block: 3rem;
+  }
+  h2 {
+    padding-block: 2rem;
+    margin-left: 1rem;
+  }
+  h3 {
+    padding-block: 1.6rem;
+  }
+  h4 {
+    padding-block: 1rem;
+  }
+}
 
-}
-footer ul .high-level-link{
-display: none;
-}
-footer ul  svg{
-display: none;
-}
 /* basics */
 .logo-header {
   white-space: nowrap;
@@ -163,8 +190,8 @@ header {
   z-index: 999;
 }
 
-header nav  {
-transition: .4s;
+header nav {
+  transition: 0.4s;
 }
 header nav ul {
   display: flex;
@@ -227,7 +254,6 @@ header .toggle-btn {
 
 /* w =988 h 742 */
 .explane-video {
-
   border-radius: 4px;
   width: 670px;
   height: 410px;
@@ -285,16 +311,16 @@ header .toggle-btn {
   }
   width: fit-content;
 }
-.carts-w-colors{
+.carts-w-colors {
   margin-block: 16rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
-  .cart{
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  .cart {
     max-width: 100%;
     min-height: 250px;
     padding: 20px;
     border-radius: 4px;
-    background-color:#e3dacc;
+    background-color: #e3dacc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,15 +330,13 @@ header .toggle-btn {
   }
 }
 
-
-
-.feature{
+.feature {
   min-height: 100vh;
   justify-content: start;
   align-items: flex-start;
   padding-top: 9rem;
 
-  li{
+  li {
     list-style: inside !important;
   }
 }
@@ -445,11 +469,11 @@ header .toggle-btn {
     display: none;
   }
 
-  header .show-mob ul{
+  header .show-mob ul {
     height: 600px;
     flex-wrap: nowrap;
   }
-  header .hidden-mob ul{
+  header .hidden-mob ul {
     padding: 0;
     height: 0px !important;
     overflow: hidden !important;
@@ -528,9 +552,10 @@ header .toggle-btn {
     height: auto !important;
   }
 
-  footer ,footer >div{
+  footer,
+  footer > div {
     flex-wrap: wrap;
-    .logo{
+    .logo {
       flex: 1;
       flex-basis: 100%;
     }
@@ -572,7 +597,7 @@ header .toggle-btn {
 
   /* Reduce thumbnail control padding to avoid overlap on tiny screens */
   .thumbnail .layout {
-    padding:22px;
+    padding: 22px;
   }
   @media (max-width: 360px) {
     .thumbnail .layout {

@@ -2,7 +2,9 @@ import React from "react";
 import Header from "./veiw/components/header";
 import Home from "./veiw/pages/Home";
 import Feature from "./veiw/components/Feature";
-import ChatData from "./model/data/FV.json";
+import conversationData from "./model/data/conversationData.json";
+import ContentRenderer from "./veiw/components/ContentRenderer";
+import Layout from "./veiw/components/Layout";
 
 export const routes = () => [
   {
@@ -11,6 +13,10 @@ export const routes = () => [
   },
   {
     path: "chat",
-    element: <Feature data={ChatData}></Feature>,
+    element: (
+      <Layout>
+        <ContentRenderer data={conversationData}></ContentRenderer>
+      </Layout>
+    ),
   },
 ];

@@ -1,0 +1,70 @@
+{
+    "headline": "Group Chat Feature by Governorate",
+    "content": [
+        {
+            "headline": "Main Objective",
+            "ul": [
+                {
+                    "li": "Connect nearby developers and enhance collaboration. Enable developers who live or work in the same governorate to find each other easily, form local networks, and collaborate on technical problems and opportunities."
+                },
+                {
+                    "li": "Share challenges, build friendships, and benefit mutually. Provide a safe space where members can openly discuss roadblocks, exchange tips, offer help, and form professional friendships that support career growth."
+                },
+                {
+                    "li": "Engage in deep discussions on technology and computer science. Encourage focused conversations about algorithms, architectures, best practices, new tools, and research topics, so members can learn from one another and raise the technical level of the community."
+                }
+            ]
+        },
+        {
+            "headline": "Additional Features",
+            "ul": [
+                {
+                    "li": "AI integration inside the chat:",
+                    "ul": [
+                        {
+                            "li": "An AI assistant can be invoked with specific keywords to answer technical questions, suggest solutions, or provide quick references and examples. The AI acts as an on-demand helper to speed up problem solving or explain concepts during conversations."
+                        }
+                    ]
+                },
+                {
+                    "li": "Team formation for real projects:",
+                    "ul": [
+                        {
+                            "li": "Members can form local or cross-governorate teams to build real-world projects together. These projects serve both as practical learning experiences and as portfolio pieces that strengthen members’ resumes and job applications."
+                        }
+                    ]
+                },
+                {
+                    "li": "Local coding competitions and progression to finals:",
+                    "ul": [
+                        {
+                            "li": "Host regular, governorate-level coding challenges or hackathons inside each chat. Winners or top teams can advance to inter-governorate finals, fostering healthy competition, motivating participation, and spotlighting local talent."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Live Interaction (Real-time Features)",
+            "ul": [
+                {
+                    "li": "Instant messaging and live reactions: Allow users to send messages instantly and receive immediate replies, making conversations fluid and timely."
+                },
+                {
+                    "li": "Real-time Q&A during live sessions: Improve the experience of live streams or hosted sessions by enabling attendees to ask questions and get answers on the spot, increasing interactivity and learning value."
+                },
+                {
+                    "li": "Host review of live feedback: Give the session host the ability to review, highlight, and respond to viewer feedback or questions in real time, ensuring important points are addressed and discussions stay productive."
+                }
+            ]
+        },
+        {
+            "headline": "Activities and Engagement",
+            "ul": [
+                {
+                    "li": "Message liking and lightweight signals of appreciation: Let users “like” messages to surface helpful answers, recognize contributors, and encourage participation. These small signals help identify valuable content and active members within each governorate chat."
+                }
+            ]
+        }
+    ]
+}

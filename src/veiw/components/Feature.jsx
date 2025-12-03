@@ -4,9 +4,14 @@ const Feature = ({ data }) => {
   return (
     <main className="container feature">
       <h1>{data.headline}</h1>
-      <ul>
+      <ul className="ul-feature">
         {data?.children?.map((e) => (
-          <li>{e}</li>
+          <>
+            <li>{e} </li>
+            <ul>
+              <li>kdfjkjdfnkdfjnvkdfjnvkdjfn</li>
+            </ul>
+          </>
         ))}
       </ul>
     </main>
