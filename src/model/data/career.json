@@ -1,0 +1,12 @@
+{
+    "career_page": {
+        "headline": "Join Our Team",
+        "subheadline": "Explore exciting career opportunities at AXE CODE and grow your professional journey.",
+        "job_listings": [],
+        "cta_section": {
+            "headline": "Can’t find the right role?",
+            "text": "Send us your CV and we’ll reach out when a suitable opportunity opens up.",
+            "submit_cv_link": "https://example.com/careers/submit-cv"
+        }
+    }
+}

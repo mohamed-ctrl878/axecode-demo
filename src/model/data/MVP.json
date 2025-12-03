@@ -1,0 +1,117 @@
+{
+  "mvp_version": "1.0",
+  "title": "AXE CODE - MVP Features",
+  "sections": [
+    {
+      "headline": "Authentication",
+      "content": [
+        {
+          "headline": "Core Features:",
+          "ul": [
+            { "li": "User registration and login via external platforms (Google, GitHub) or traditional email/password." },
+            { "li": "Secure session handling and role-based permissions." },
+            { "li": "Ability to manage multiple user roles with different access levels." }
+          ]
+        }
+      ]
+    },
+    {
+      "headline": "Live Streaming",
+      "content": [
+        {
+          "headline": "Core Capabilities:",
+          "ul": [
+            { "li": "Broadcast live lessons, coding sessions, and tech events on the platform." },
+            { "li": "Interactive chat during live streams for questions, discussions, and collaboration." },
+            { "li": "Moderation support to review messages and ensure safe communication during streams." },
+            { "li": "Integration with courses, challenges, and blogs to enhance the learning experience." },
+            { "li": "Scheduling live streams and notifying participants in advance." }
+          ]
+        }
+      ]
+    },
+    {
+      "headline": "Dashboards",
+      "content": [
+        {
+          "headline": "Role-Based Dashboards:",
+          "ul": [
+            { "li": "Admin Dashboard: Manage users, courses, blogs, events, live streams, challenges, and marketplace." },
+            { "li": "Instructor Dashboard: Manage lessons, live sessions, track student progress, and handle evaluations." },
+            { "li": "Moderator Dashboard: Monitor chat messages, review content, and handle reports." },
+            { "li": "Standard User Dashboard: View learning progress, blogs, challenges, events, and personal achievements." }
+          ]
+        }
+      ]
+    },
+    {
+      "headline": "Blogs",
+      "content": [
+        {
+          "headline": "Core Features:",
+          "ul": [
+            { "li": "Create, edit, and publish blogs using a rich-text editor." },
+            { "li": "Link blogs to courses, challenges, and events." },
+            { "li": "Enable comments, likes, and community interaction on each blog." }
+          ]
+        }
+      ]
+    },
+    {
+      "headline": "Problem Challenges",
+      "content": [
+        {
+          "headline": "Core Features:",
+          "ul": [
+            { "li": "Post daily coding problems and challenges with test cases." },
+            { "li": "Track user solutions, progress, and performance." },
+            { "li": "Integrate challenges with learning content for applied practice." },
+            { "li": "Encourage collaboration through group challenges and team competitions." }
+          ]
+        }
+      ]
+    },
+    {
+      "headline": "Educational Content",
+      "content": [
+        {
+          "headline": "Core Features:",
+          "ul": [
+            { "li": "Manage courses, lessons, quizzes, and structured learning paths." },
+            { "li": "Integration with live streaming for interactive learning sessions." },
+            { "li": "Track student progress and provide achievements and badges." },
+            { "li": "Connect lessons with blogs and problem challenges for deeper engagement." }
+          ]
+        }
+      ]
+    },
+    {
+      "headline": "Tech Events & Schedule",
+      "content": [
+        {
+          "headline": "Core Features:",
+          "ul": [
+            { "li": "Display scheduled tech events and workshops." },
+            { "li": "Live streaming of events with real-time chat participation." },
+            { "li": "Enable user comments and interaction before, during, and after events." },
+            { "li": "Integration with blogs, learning content, and challenges." }
+          ]
+        }
+      ]
+    },
+    {
+      "headline": "Chat",
+      "content": [
+        {
+          "headline": "Core Features:",
+          "ul": [
+            { "li": "Real-time messaging for users with group and private chat rooms." },
+            { "li": "Integration with live streams, courses, and tech events." },
+            { "li": "Regional chat rooms with moderators for safe communication." },
+            { "li": "Message filtering for inappropriate content and reporting system." }
+          ]
+        }
+      ]
+    }
+  ]
+}

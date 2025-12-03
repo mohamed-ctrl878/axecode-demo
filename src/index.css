@@ -98,6 +98,9 @@ ul {
 p {
   font-weight: 300;
   color: #5c5b5b;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
 }
 footer,
 footer > div {
@@ -135,29 +138,52 @@ footer ul svg {
 
 .ul-feature {
   margin-left: 5rem;
-  list-style: unset;
-  line-height: 2;
+  margin-bottom: 1.5rem;
+  list-style: disc;
+  line-height: 2.1;
+  padding-left: 1rem;
 }
 .ul-feature ul {
   margin-left: 2rem;
-  list-style: unset;
-  line-height: 1.5;
+  margin-top: 0.8rem;
+  list-style: circle;
+  line-height: 1.8;
+  padding-left: 1rem;
+}
+.ul-feature li {
+  margin-bottom: 0.6rem;
 }
 .content-page {
   padding-top: 9rem;
   padding-bottom: 3rem;
+  min-height: 100vh;
+  flex-direction: column;
   h1 {
-    padding-block: 3rem;
+    padding-block: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    letter-spacing: 0.3px;
   }
   h2 {
-    padding-block: 2rem;
+    padding-block: 1.8rem;
     margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.2px;
   }
   h3 {
-    padding-block: 1.6rem;
+    padding-block: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
   }
   h4 {
-    padding-block: 1rem;
+    padding-block: 0.8rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+  }
+  p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
   }
 }
 
@@ -243,13 +269,16 @@ header nav ul > div > div {
 .reg-log-btns {
   display: flex;
   gap: 10px;
+  z-index: 9;
   button {
     cursor: no-drop;
   }
 }
+
 header .toggle-btn {
   display: none;
   cursor: pointer;
+  z-index: 9;
 }
 
 /* w =988 h 742 */
@@ -296,30 +325,37 @@ header .toggle-btn {
   display: flex;
   align-items: start;
   flex-direction: column;
-  margin-top: 8rem;
-  padding-top: 4rem;
-  border-top: 1px solid black;
+  margin-top: 6rem;
+  padding-top: 3rem;
+  border-top: 2px solid #ddd;
+  transition: border-color 0.3s ease;
 }
 .card-horizontal .cart {
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f0f0f0;
   h3 {
     width: 500px;
+    margin-bottom: 0.5rem;
   }
   p {
     width: -webkit-fill-available;
+    line-height: 1.8;
   }
   width: fit-content;
 }
 .carts-w-colors {
-  margin-block: 16rem;
+  margin-block: 12rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
   .cart {
     max-width: 100%;
-    min-height: 250px;
-    padding: 20px;
-    border-radius: 4px;
+    min-height: 280px;
+    padding: 2rem;
+    border-radius: 8px;
     background-color: #e3dacc;
     display: flex;
     align-items: center;
@@ -327,6 +363,12 @@ header .toggle-btn {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  .cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -340,6 +382,27 @@ header .toggle-btn {
     list-style: inside !important;
   }
 }
+.log-reg-message {
+  position: fixed;
+  width: 100%;
+  max-width: 100% !important;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  p {
+    align-self: center;
+    padding: 10px;
+    background: var(--white);
+    border-radius: 4px;
+  }
+}
+
 @media (min-width: 375px) {
   .details-content {
     font-size: 15px;
@@ -460,6 +523,7 @@ header .toggle-btn {
     border-radius: 5px;
     width: 100%;
     gap: 7px;
+    z-index: 9;
   }
   .reg-log-btns.show-btn {
     display: block;
@@ -559,6 +623,15 @@ header .toggle-btn {
       flex: 1;
       flex-basis: 100%;
     }
+  }
+  .layout-log-reg {
+    background-color: var(--main-bg-color);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
   }
 }
 

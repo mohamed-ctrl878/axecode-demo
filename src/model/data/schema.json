@@ -1,0 +1,965 @@
+{
+    "definitions": {
+        "HomeData": {
+            "type": "object",
+            "required": [
+                "headline",
+                "paragraph",
+                "videoSource",
+                "thumbnail"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "Main headline for home page"
+                },
+                "paragraph": {
+                    "type": "string",
+                    "description": "Descriptive paragraph for home page"
+                },
+                "videoSource": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL to embedded video"
+                },
+                "thumbnail": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL to video thumbnail image"
+                }
+            }
+        },
+        "JobListing": {
+            "type": "object",
+            "required": [
+                "id",
+                "title",
+                "department",
+                "location",
+                "employment_type",
+                "posted_date",
+                "description",
+                "responsibilities",
+                "requirements",
+                "benefits",
+                "apply_link"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unique job listing ID"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Job title"
+                },
+                "department": {
+                    "type": "string",
+                    "description": "Department name"
+                },
+                "location": {
+                    "type": "string",
+                    "description": "Job location"
+                },
+                "employment_type": {
+                    "type": "string",
+                    "enum": [
+                        "Full-time",
+                        "Part-time",
+                        "Contract",
+                        "Internship"
+                    ],
+                    "description": "Type of employment"
+                },
+                "posted_date": {
+                    "type": "string",
+                    "format": "date",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "description": "Date job was posted (YYYY-MM-DD)"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Job description"
+                },
+                "responsibilities": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of job responsibilities"
+                },
+                "requirements": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of job requirements"
+                },
+                "benefits": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of job benefits"
+                },
+                "apply_link": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Link to apply for the job"
+                }
+            }
+        },
+        "CareerCTA": {
+            "type": "object",
+            "required": [
+                "headline",
+                "text",
+                "submit_cv_link"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "CTA headline"
+                },
+                "text": {
+                    "type": "string",
+                    "description": "CTA description text"
+                },
+                "submit_cv_link": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Link to submit CV"
+                }
+            }
+        },
+        "CareerPage": {
+            "type": "object",
+            "required": [
+                "headline",
+                "subheadline",
+                "job_listings",
+                "cta_section"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "Page headline"
+                },
+                "subheadline": {
+                    "type": "string",
+                    "description": "Page subheadline"
+                },
+                "job_listings": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/JobListing"
+                    },
+                    "description": "List of job listings"
+                },
+                "cta_section": {
+                    "$ref": "#/definitions/CareerCTA",
+                    "description": "Call-to-action section"
+                }
+            }
+        },
+        "CareerData": {
+            "type": "object",
+            "required": [
+                "career_page"
+            ],
+            "properties": {
+                "career_page": {
+                    "$ref": "#/definitions/CareerPage"
+                }
+            }
+        },
+        "NewsItem": {
+            "type": "object",
+            "required": [
+                "id",
+                "title",
+                "date",
+                "summary",
+                "content",
+                "link"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unique news item ID"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "News title"
+                },
+                "date": {
+                    "type": "string",
+                    "format": "date",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "description": "Publication date (YYYY-MM-DD)"
+                },
+                "summary": {
+                    "type": "string",
+                    "description": "Brief summary of the news"
+                },
+                "content": {
+                    "type": "string",
+                    "description": "Full news content"
+                },
+                "link": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Link to full article"
+                }
+            }
+        },
+        "NewsPage": {
+            "type": "object",
+            "required": [
+                "headline",
+                "subheadline",
+                "news_list"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "Page headline"
+                },
+                "subheadline": {
+                    "type": "string",
+                    "description": "Page subheadline"
+                },
+                "news_list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/NewsItem"
+                    },
+                    "description": "List of news items"
+                }
+            }
+        },
+        "NewsData": {
+            "type": "object",
+            "required": [
+                "news_page"
+            ],
+            "properties": {
+                "news_page": {
+                    "$ref": "#/definitions/NewsPage"
+                }
+            }
+        },
+        "FeatureItem": {
+            "type": "object",
+            "required": [
+                "id",
+                "title",
+                "summary",
+                "details"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unique feature ID"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Feature title"
+                },
+                "summary": {
+                    "type": "string",
+                    "description": "Brief feature summary"
+                },
+                "details": {
+                    "type": "string",
+                    "description": "Detailed feature description"
+                }
+            }
+        },
+        "NextFeaturesPage": {
+            "type": "object",
+            "required": [
+                "headline",
+                "subheadline",
+                "features_list"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "Page headline"
+                },
+                "subheadline": {
+                    "type": "string",
+                    "description": "Page subheadline"
+                },
+                "features_list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FeatureItem"
+                    },
+                    "description": "List of upcoming features"
+                }
+            }
+        },
+        "NextFeaturesData": {
+            "type": "object",
+            "required": [
+                "next_features"
+            ],
+            "properties": {
+                "next_features": {
+                    "$ref": "#/definitions/NextFeaturesPage"
+                }
+            }
+        },
+        "ListItem": {
+            "type": "object",
+            "required": [
+                "li"
+            ],
+            "properties": {
+                "li": {
+                    "type": "string",
+                    "description": "List item text"
+                },
+                "ul": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ListItem"
+                    },
+                    "description": "Nested list items"
+                }
+            }
+        },
+        "ContentSection": {
+            "type": "object",
+            "required": [
+                "headline",
+                "ul"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "Section headline"
+                },
+                "ul": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ListItem"
+                    },
+                    "description": "List of content items"
+                }
+            }
+        },
+        "EduContent": {
+            "type": "object",
+            "required": [
+                "headline",
+                "content"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "Page headline"
+                },
+                "content": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ContentSection"
+                    },
+                    "description": "List of content sections"
+                }
+            }
+        },
+        "BlogsData": {
+            "type": "object",
+            "required": [
+                "headline",
+                "content"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "Page headline"
+                },
+                "content": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ContentSection"
+                    },
+                    "description": "List of content sections"
+                }
+            }
+        },
+        "EventsData": {
+            "type": "object",
+            "required": [
+                "headline",
+                "content"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "Page headline"
+                },
+                "content": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ContentSection"
+                    },
+                    "description": "List of content sections"
+                }
+            }
+        },
+        "CartItem": {
+            "type": "object",
+            "required": [
+                "headline",
+                "paragraph"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "Cart headline"
+                },
+                "paragraph": {
+                    "type": "string",
+                    "description": "Cart paragraph content"
+                }
+            }
+        },
+        "FooterLink": {
+            "type": "object",
+            "required": [
+                "label",
+                "href"
+            ],
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "description": "Link label"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Link URL"
+                }
+            }
+        },
+        "FooterSection": {
+            "type": "object",
+            "required": [
+                "title",
+                "links"
+            ],
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "Section title"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FooterLink"
+                    },
+                    "description": "List of links in section"
+                }
+            }
+        },
+        "FooterData": {
+            "type": "object",
+            "required": [
+                "sections",
+                "copyright"
+            ],
+            "properties": {
+                "sections": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FooterSection"
+                    },
+                    "description": "Footer sections"
+                },
+                "copyright": {
+                    "type": "string",
+                    "description": "Copyright text"
+                },
+                "socialLinks": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "platform",
+                            "url"
+                        ],
+                        "properties": {
+                            "platform": {
+                                "type": "string",
+                                "description": "Social media platform name"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "Social media profile URL"
+                            }
+                        }
+                    },
+                    "description": "Social media links"
+                }
+            }
+        },
+        "NavLink": {
+            "type": "object",
+            "required": [
+                "label",
+                "href"
+            ],
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "description": "Navigation link label"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Link URL"
+                },
+                "icon": {
+                    "type": "string",
+                    "description": "Icon name or path"
+                }
+            }
+        },
+        "NavData": {
+            "type": "object",
+            "required": [
+                "brand",
+                "links"
+            ],
+            "properties": {
+                "brand": {
+                    "type": "string",
+                    "description": "Brand/company name"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/NavLink"
+                            },
+                            {
+                                "type": "object",
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/NavLink"
+                                    },
+                                    {
+                                        "properties": {
+                                            "submenu": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/definitions/NavLink"
+                                                },
+                                                "description": "Dropdown submenu items"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "description": "Navigation links with optional submenus"
+                }
+            }
+        },
+        "ChatMessage": {
+            "type": "object",
+            "required": [
+                "id",
+                "user_id",
+                "username",
+                "message",
+                "timestamp"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Message ID"
+                },
+                "user_id": {
+                    "type": "string",
+                    "description": "User ID"
+                },
+                "username": {
+                    "type": "string",
+                    "description": "Username"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "Message content"
+                },
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "ISO timestamp"
+                },
+                "avatar": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "User avatar URL"
+                }
+            }
+        },
+        "ConversationData": {
+            "type": "object",
+            "required": [
+                "conversation_id",
+                "title",
+                "participants_count",
+                "messages",
+                "created_at",
+                "updated_at"
+            ],
+            "properties": {
+                "conversation_id": {
+                    "type": "string",
+                    "description": "Unique conversation ID"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Conversation title"
+                },
+                "governorate": {
+                    "type": "string",
+                    "description": "Governorate/region for local leagues"
+                },
+                "participants_count": {
+                    "type": "integer",
+                    "description": "Number of participants"
+                },
+                "messages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ChatMessage"
+                    },
+                    "description": "List of chat messages"
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Creation timestamp"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Last update timestamp"
+                }
+            }
+        },
+        "MVPFeature": {
+            "type": "object",
+            "required": [
+                "title",
+                "description",
+                "status"
+            ],
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "Feature title"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Feature description"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "active",
+                        "upcoming",
+                        "beta"
+                    ],
+                    "description": "Feature status"
+                }
+            }
+        },
+        "MVPData": {
+            "type": "object",
+            "required": [
+                "headline",
+                "subheadline",
+                "features"
+            ],
+            "properties": {
+                "headline": {
+                    "type": "string",
+                    "description": "MVP headline"
+                },
+                "subheadline": {
+                    "type": "string",
+                    "description": "MVP subheadline"
+                },
+                "features": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MVPFeature"
+                    },
+                    "description": "List of MVP features"
+                }
+            }
+        },
+        "NewFeatureItem": {
+            "type": "object",
+            "required": [
+                "id",
+                "title",
+                "description",
+                "release_date",
+                "category",
+                "status"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Feature ID"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Feature title"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Feature description"
+                },
+                "release_date": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Release date (YYYY-MM-DD)"
+                },
+                "category": {
+                    "type": "string",
+                    "description": "Feature category"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "announced",
+                        "beta",
+                        "released"
+                    ],
+                    "description": "Feature status"
+                }
+            }
+        },
+        "NewFeatureData": {
+            "type": "object",
+            "required": [
+                "features"
+            ],
+            "properties": {
+                "features": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/NewFeatureItem"
+                    },
+                    "description": "List of new features"
+                },
+                "headline": {
+                    "type": "string",
+                    "description": "Page headline"
+                },
+                "subheadline": {
+                    "type": "string",
+                    "description": "Page subheadline"
+                }
+            }
+        },
+        "UserProfile": {
+            "type": "object",
+            "required": [
+                "id",
+                "username",
+                "email",
+                "skills",
+                "experience_level",
+                "created_at"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "User ID"
+                },
+                "username": {
+                    "type": "string",
+                    "description": "Username"
+                },
+                "email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "User email"
+                },
+                "avatar": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "User avatar URL"
+                },
+                "bio": {
+                    "type": "string",
+                    "description": "User bio"
+                },
+                "skills": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of user skills"
+                },
+                "experience_level": {
+                    "type": "string",
+                    "enum": [
+                        "beginner",
+                        "intermediate",
+                        "advanced",
+                        "expert"
+                    ],
+                    "description": "Experience level"
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Account creation timestamp"
+                }
+            }
+        },
+        "UserProgress": {
+            "type": "object",
+            "required": [
+                "user_id",
+                "courses_completed",
+                "challenges_solved",
+                "badges",
+                "total_points",
+                "level"
+            ],
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "description": "User ID"
+                },
+                "courses_completed": {
+                    "type": "integer",
+                    "description": "Number of completed courses"
+                },
+                "challenges_solved": {
+                    "type": "integer",
+                    "description": "Number of solved challenges"
+                },
+                "badges": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of earned badges"
+                },
+                "total_points": {
+                    "type": "integer",
+                    "description": "Total points earned"
+                },
+                "level": {
+                    "type": "integer",
+                    "description": "User level"
+                }
+            }
+        },
+        "PaginationMeta": {
+            "type": "object",
+            "required": [
+                "page",
+                "limit",
+                "total",
+                "hasMore"
+            ],
+            "properties": {
+                "page": {
+                    "type": "integer",
+                    "description": "Current page number"
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Items per page"
+                },
+                "total": {
+                    "type": "integer",
+                    "description": "Total items count"
+                },
+                "hasMore": {
+                    "type": "boolean",
+                    "description": "Whether more items exist"
+                }
+            }
+        },
+        "APIResponse": {
+            "type": "object",
+            "required": [
+                "success",
+                "data"
+            ],
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "description": "Request success status"
+                },
+                "data": {
+                    "type": "object",
+                    "description": "Response data"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "Response message"
+                },
+                "pagination": {
+                    "$ref": "#/definitions/PaginationMeta"
+                }
+            }
+        },
+        "ValidationError": {
+            "type": "object",
+            "required": [
+                "field",
+                "message"
+            ],
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "description": "Field name with error"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "Error message"
+                }
+            }
+        },
+        "ValidationResult": {
+            "type": "object",
+            "required": [
+                "isValid",
+                "errors"
+            ],
+            "properties": {
+                "isValid": {
+                    "type": "boolean",
+                    "description": "Validation result"
+                },
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ValidationError"
+                    },
+                    "description": "List of validation errors"
+                }
+            }
+        }
+    },
+    "description": "AXE CODE Data Type Models & Schema - Complete JSON Schema for all application data structures"
+}

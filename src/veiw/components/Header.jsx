@@ -8,17 +8,21 @@ import Reglog from "./reglog.jsx";
 import Donate from "./Donate.jsx";
 import Toggle from "./Toggle.jsx";
 const Header = () => {
-  const [toggle,setToggle]= useState(false)
+  const [toggle, setToggle] = useState(false);
   return (
     <header className="header">
       <div className="container">
-
-      <Logo position={"header"}></Logo>
-      <Nav toggle={toggle}>
-        <Linksmapper depth={1} data={navData}></Linksmapper>
-      </Nav>
-      <Reglog toggle={toggle}></Reglog>
-      <Toggle toggle={toggle} setToggle={setToggle}></Toggle>
+        <Logo position={"header"}></Logo>
+        <Nav toggle={toggle}>
+          <Linksmapper
+            setToggle={setToggle}
+            depth={1}
+            data={navData}
+          ></Linksmapper>
+        </Nav>
+        <Reglog setToggle={setToggle} toggle={toggle}></Reglog>
+        <Toggle toggle={toggle} setToggle={setToggle}></Toggle>
+        {toggle && <div className="layout-log-reg"></div>}
       </div>
     </header>
   );

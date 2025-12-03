@@ -1,13 +1,288 @@
 {
-    "headline": "First Version",
-    "children": [
-        "icsldaclaskdmc",
-        "lsakdmclkmasdlckmsdlkc",
-        "sldkmclkadmclkmsdclkasmd",
-        "ladkcklasmdlkcmasldkclaskd",
-        "lskdmclksdmclksmdlckadslmcksadlkmlk"
-    ],
-    "relation":{
-        
-    }
+    "version": "1.0",
+    "title": "AXE CODE - First Release Overview",
+    "sections": [
+        {
+            "headline": "Authentication System",
+            "content": [
+                {
+                    "headline": "Main Features:",
+                    "ul": [
+                        {
+                            "li": "Support for registration and login using external platforms (OAuth) such as Google and GitHub."
+                        },
+                        {
+                            "li": "Traditional email and password authentication with secure session handling."
+                        },
+                        {
+                            "li": "Role-based access with flexible permission management."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Live Streaming",
+            "content": [
+                {
+                    "headline": "Core Capabilities:",
+                    "ul": [
+                        {
+                            "li": "Broadcast live lessons, events, or workshops directly on the platform."
+                        },
+                        {
+                            "li": "Interactive chat during live streams allowing users to ask questions, share feedback, and collaborate in real-time."
+                        },
+                        {
+                            "li": "Integration with courses and challenges: learners can follow along with lessons and apply concepts immediately."
+                        },
+                        {
+                            "li": "Integration with blogs and event discussions: users can comment, share insights, and document learning experiences."
+                        },
+                        {
+                            "li": "Ability to schedule streams in advance and notify users with reminders."
+                        },
+                        {
+                            "li": "Support for moderators and reviewers to manage inappropriate content during streams."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Live Chat",
+            "content": [
+                {
+                    "headline": "Core Capabilities:",
+                    "ul": [
+                        {
+                            "li": "Real-time messaging between users for smooth communication."
+                        },
+                        {
+                            "li": "Full integration with other platform features such as courses, events, challenges, and blogs."
+                        },
+                        {
+                            "li": "Ability to create chat rooms linked to specific content (e.g., live classes, events, problem discussions)."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Tech Events",
+            "content": [
+                {
+                    "headline": "Event System Features:",
+                    "ul": [
+                        {
+                            "li": "Display and manage both virtual and in-person tech events."
+                        },
+                        {
+                            "li": "Live streaming of events with interactive live chat."
+                        },
+                        {
+                            "li": "Ability to post opinions and comments before the event starts."
+                        },
+                        {
+                            "li": "Linking events to blogs, discussions, announcements, and follow-up posts."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Educational Content Management",
+            "content": [
+                {
+                    "headline": "Learning Management System (LMS):",
+                    "ul": [
+                        {
+                            "li": "Complete administration of courses, lessons, and educational materials."
+                        },
+                        {
+                            "li": "Support for video lessons, text modules, quizzes, and structured learning paths."
+                        },
+                        {
+                            "li": "Ability to connect learning progress with blogs, badges, challenges, and user activities."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Problem Solving & Challenges",
+            "content": [
+                {
+                    "headline": "Features:",
+                    "ul": [
+                        {
+                            "li": "Publishing programming problems and daily challenges."
+                        },
+                        {
+                            "li": "Full management of test cases and solution validation."
+                        },
+                        {
+                            "li": "Integration with the learning system, badges, analytics, and user progress."
+                        },
+                        {
+                            "li": "Encouraging teamwork and competition through ranked challenges."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Regional Community Chats",
+            "content": [
+                {
+                    "headline": "Features:",
+                    "ul": [
+                        {
+                            "li": "Dedicated chat rooms for each governorate or region."
+                        },
+                        {
+                            "li": "Assigned moderators to review messages and ensure safe communication."
+                        },
+                        {
+                            "li": "Automatic filtering of inappropriate or harmful content."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Programming League Management",
+            "content": [
+                {
+                    "headline": "Core Abilities:",
+                    "ul": [
+                        {
+                            "li": "Structured programming league where teams compete using real-world projects."
+                        },
+                        {
+                            "li": "Linking each team with their GitHub repositories and progress."
+                        },
+                        {
+                            "li": "Real-time monitoring of team performance, standings, and project quality."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Blog Publishing System",
+            "content": [
+                {
+                    "headline": "Features:",
+                    "ul": [
+                        {
+                            "li": "Users can write and publish blogs using a rich-text editor."
+                        },
+                        {
+                            "li": "Linking blogs with courses, events, achievements, or challenges."
+                        },
+                        {
+                            "li": "Community engagement through comments, likes, and shares."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Developer Marketplace",
+            "content": [
+                {
+                    "headline": "Features:",
+                    "ul": [
+                        {
+                            "li": "A store that provides essential tools and accessories for developers."
+                        },
+                        {
+                            "li": "Includes lightweight hardware, productivity tools, and developer gear."
+                        },
+                        {
+                            "li": "Simple purchase and listing system in the first release."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Integrated AI Assistant",
+            "content": [
+                {
+                    "headline": "Capabilities:",
+                    "ul": [
+                        {
+                            "li": "AI system trained on platform-related context for smarter responses."
+                        },
+                        {
+                            "li": "Helps users search the platform using context-aware queries."
+                        },
+                        {
+                            "li": "Supports study help, challenge explanations, event summaries, and progress guidance."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Gamification System",
+            "content": [
+                {
+                    "headline": "Motivation Tools:",
+                    "ul": [
+                        {
+                            "li": "Badges, ranks, and points based on user activity and achievements."
+                        },
+                        {
+                            "li": "Evaluations linked to learning progress, challenges, and community participation."
+                        },
+                        {
+                            "li": "Supports building a strong professional profile within the platform."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Role-Based Dashboards",
+            "content": [
+                {
+                    "headline": "Important Clarification:",
+                    "ul": [
+                        {
+                            "li": "The platform does NOT rely on a single dashboard for all users."
+                        },
+                        {
+                            "li": "Each role has its own dedicated dashboard with features relevant to its permissions."
+                        }
+                    ]
+                },
+                {
+                    "headline": "Dashboard Types:",
+                    "ul": [
+                        {
+                            "li": "Admin Dashboard: Full access to user management, content moderation, course control, events, chats, marketplace, leagues, and analytics."
+                        },
+                        {
+                            "li": "Instructor Dashboard: Tools for managing courses, publishing lessons, viewing student progress, and handling live classes."
+                        },
+                        {
+                            "li": "Moderator Dashboard: Specialized panel for message reviewing, event moderation, blog approval, and handling reports."
+                        },
+                        {
+                            "li": "League Manager Dashboard: Tools for managing teams, linking GitHub repositories, publishing tasks, and tracking progress."
+                        },
+                        {
+                            "li": "Seller Dashboard: For users selling items in the marketplace (product management, orders, stock, etc.)."
+                        },
+                        {
+                            "li": "Standard User Dashboard: Simplified panel showing learning progress, badges, saved problems, events, blogs, and personal timeline."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

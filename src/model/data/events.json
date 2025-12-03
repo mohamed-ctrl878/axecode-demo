@@ -1,0 +1,36 @@
+{
+    "headline": "Tech Events",
+    "content": [
+        {
+            "headline": "Main Objective:",
+            "ul": [
+                {
+                    "li": "Easy participation in tech events: AXE CODE makes attending technical events simple and accessible, whether through real-world physical attendance or virtual participation from anywhere."
+                },
+                {
+                    "li": "Staying updated with the latest in technology: Events allow members to explore new advancements in technology and computer science, keeping them informed about emerging tools, trends, and innovations."
+                },
+                {
+                    "li": "Learning from industry leaders: Developers can directly learn from experts, innovators, and pioneers in the field, gaining valuable insights that support their professional growth."
+                },
+                {
+                    "li": "Understanding the future of tech: Events provide forward-looking perspectives from professionals who understand the direction of the industry, helping members develop a clear vision of upcoming opportunities and challenges."
+                }
+            ]
+        },
+        {
+            "headline": "Relationships and Interaction:",
+            "ul": [
+                {
+                    "li": "Live event broadcasting: Members can join live streams of events, enabling real-time participation for those who cannot attend physically."
+                },
+                {
+                    "li": "Group chat for event participants: A dedicated group chat is available for everyone attending the event, allowing discussions, idea-sharing, and engagement before, during, and after the event."
+                },
+                {
+                    "li": "Pre-event comments and discussions: Users can share opinions, expectations, and questions in the event timeline before it starts, encouraging early engagement and community interaction."
+                }
+            ]
+        }
+    ]
+}

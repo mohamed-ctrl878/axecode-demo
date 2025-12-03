@@ -1,0 +1,45 @@
+{
+    "headline": "software League",
+    "content": [
+        {
+            "headline": "Main Objective:",
+            "ul": [
+                {
+                    "li": "Central and flagship feature of the app: The Coding League serves as the heart of the application, providing developers with a real platform to practice and improve their skills in an interactive and competitive environment."
+                },
+                {
+                    "li": "Supporting beginner developers: The league helps newcomers engage in practical projects and gain hands-on experience by working on real applications, either under supervision or as part of integrated teams."
+                },
+                {
+                    "li": "Forming diverse and specialized teams: Developers from different specializations can join a single team, with each member contributing their assigned part of the project. This setup mirrors real-world teamwork and project collaboration."
+                },
+                {
+                    "li": "Simulating a real work environment: Working as part of a team mimics professional workplaces, offering valuable experience in collaboration, task management, and professional communication."
+                },
+                {
+                    "li": "Gaining practical experience: By participating in real projects, members acquire skills and experiences that are highly valuable when applying for jobs."
+                },
+                {
+                    "li": "Creating software products aligned with major company requirements: Projects developed in the league are designed according to modern standards and recruitment requirements, making them strong additions to members’ portfolios and resumes."
+                },
+                {
+                    "li": "Awards and recognition: Valuable prizes are awarded to winners and top-performing teams, encouraging participation and promoting healthy competition."
+                }
+            ]
+        },
+        {
+            "headline": "Relationships and Interaction:",
+            "ul": [
+                {
+                    "li": "Live broadcasting of results: Competition outcomes and final presentations are shared through live streams, allowing everyone to witness progress and achievements in real time."
+                },
+                {
+                    "li": "Linking finals to tech events: The finals may be integrated with local or international tech events, enhancing interaction and connecting members to the wider tech community."
+                },
+                {
+                    "li": "Publishing results and news in blogs: Share results, team stories, and achievements on official blogs to raise community awareness and inspire others to participate."
+                }
+            ]
+        }
+    ]
+}
