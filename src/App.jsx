@@ -12,6 +12,7 @@ import { routes } from "./routes";
 import Header from "./veiw/components/Header";
 import Footer from "./veiw/components/Footer";
 import ScrollToTop from "./veiw/components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/next";
 
 const SetRoute = () => useRoutes(routes());
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <Fragment>
       <BrowserRouter>
+        <Analytics />
         <ScrollToTop></ScrollToTop>
         <Header></Header>
         <SetRoute />
