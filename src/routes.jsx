@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./veiw/components/header";
+import Header from "./veiw/components/Header";
 import Home from "./veiw/pages/Home";
 import conversationData from "./model/data/conversationData.json";
 import blogsData from "./model/data/blogsData.json";
