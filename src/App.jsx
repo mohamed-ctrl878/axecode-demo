@@ -9,8 +9,8 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import { routes } from "./routes";
-import Header from "./veiw/components/header";
-import Footer from "./veiw/components/footer";
+import Header from "./veiw/components/Header";
+import Footer from "./veiw/components/Footer";
 import ScrollToTop from "./veiw/components/ScrollToTop";
 
 const SetRoute = () => useRoutes(routes());
