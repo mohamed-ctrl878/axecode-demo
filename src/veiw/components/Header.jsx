@@ -3,8 +3,8 @@ import Nav from "./Nav.jsx";
 import LinkLi from "./LinkLi.jsx";
 import navData from "../../model/data/nav.json";
 import Linksmapper from "./Linksmapper.jsx";
-import Logo from "./logo.jsx";
-import Reglog from "./reglog.jsx";
+import Logo from "./Logo.jsx";
+import Reglog from "./Reglog.jsx";
 import Donate from "./Donate.jsx";
 import Toggle from "./Toggle.jsx";
 const Header = () => {

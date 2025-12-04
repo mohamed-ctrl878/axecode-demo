@@ -2,7 +2,7 @@ import React from 'react'
 import Linksmapper from './Linksmapper'
 import data from '../../model/data/nav.json'
 import datafooter from '../../model/data/datafooter.json'
-import Logo from './logo'
+import Logo from './Logo'
 const Footer = () => {
   return (
     <footer >
