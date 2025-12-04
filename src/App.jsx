@@ -12,7 +12,7 @@ import { routes } from "./routes";
 import Header from "./veiw/components/Header";
 import Footer from "./veiw/components/Footer";
 import ScrollToTop from "./veiw/components/ScrollToTop";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const SetRoute = () => useRoutes(routes());
 
